@@ -22,6 +22,8 @@ namespace Profile
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/angular.js",
+                      "~/Scripts/Modal.js",
+                      "~/Scripts/AngularController/Profile.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -29,6 +31,9 @@ namespace Profile
                       "~/Content/font-awesome.css",
                       "~/Content/Navbar.css",
                       "~/Content/ProfileHeader.css",
+                      "~/Content/Modal.css",
+                      "~/Content/PersonalInformation.css",
+                      "~/Content/ProfileBackgroundInfo.css",
                       "~/Content/site.css"));
         }
     }

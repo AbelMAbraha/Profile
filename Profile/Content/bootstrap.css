@@ -924,7 +924,7 @@ pre code {
   width: 100%;
 }
 
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
   .container {
     max-width: 750px;
   }
@@ -1239,7 +1239,7 @@ pre code {
   .col-md-offset-11 {
     margin-left: 91.66666666666666%;
   }
-}*/
+}
 
 @media (min-width: 1200px) {
   .container {
@@ -4183,7 +4183,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-fixed-top {
   top: 0;
-  z-index: 1030;
+  z-index: 1;
 }
 
 .navbar-fixed-bottom {

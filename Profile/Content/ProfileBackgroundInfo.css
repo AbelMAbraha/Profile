@@ -1,0 +1,46 @@
+﻿#background > div {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 5px 0px, rgba(0, 0, 0, 0.04) 0px 2px 10px 0px;
+    padding: 30px;
+    background-color: white;
+}
+
+    #background > div > div {
+        overflow: hidden;
+        border-top: 1px solid rgb(236, 234, 234);
+        padding: 10px 0px;
+    }
+
+        #background > div > div:first-child > p {
+            font-family: "Tw Cen MT";
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(76, 70, 70);
+        }
+
+        #background > div > div > p:first-child {
+            color: rgb(29, 29, 51);
+            font-size: 22px;
+        }
+
+            #background > div > div > p:first-child > i {
+                width: 30px;
+                font-size: 22px;
+                margin-right: 10px;
+            }
+
+        #background > div > div > p:last-child {
+            font-family: Verdana;
+            line-height: 25px;
+        }
+
+        #background > div > div:nth-child(5) > button, #background > div > div:nth-child(6) > button {
+            border-radius: 5px;
+            color: rgb(117, 139, 158);
+            font-weight: bold;
+            font-family: "Tw Cen MT";
+            padding: 10px;
+            background-color: rgba(145, 176, 204, 0.24);
+            border: 0px;
+            width: 23%;
+            margin-right: 10px;
+        }

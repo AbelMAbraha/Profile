@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Profile.ViewModel.ProfileInformationViewModel
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -41,13 +43,210 @@
     </div>
 </div>
 
-<div class="col-lg-3">
-    <p>Hello</p>
-</div>
+<div class="col-lg-12" id="personalInfo">
+    <div class="col-lg-3">
+        <div ng-app="MessagesApp" class="col-lg-12" id="bioProfile">
+            <button id="minimizeBio" type="button">
+                <div id="bioHeader" class="usersBio">
+                    <div class="col-lg-12">
+                        <span>Profile Info</span>
+                        <div class="pull-right">
+                            <span id="arrowMinimizeBio" class="fa fa-chevron-down"></span>
+                        </div>
+                    </div>
+                </div>
+            </button>
+            <div class="col-lg-12" id="BioInfo">
+                <div id="bioFullName" class="col-lg-12">
+                    <p>Full Name:</p>
+                    <p>@Model.FirstName @Model.LastName</p>
+                </div>
+                <div id="bioInfoAboutMe" class="col-lg-12">
+                    <p>Bio:</p>
+                    <p>@Model.Bio</p>
+                </div>
+                <div id="bioFullName" class="col-lg-12">
+                    <p>Current:</p>
+                    <p>@Model.CurrentOccupation</p>
+                </div>
+                <div id="bioOccupation" class="col-lg-12">
+                    <p>Previous:</p>
+                    <p>@Model.PreviousOccupation</p>
+                </div>
+                <div id="bioLocation" class="col-lg-12">
+                    <p>Education:</p>
+                    <p>@Model.Education</p>
+                </div>
+                <div id="bioLocation" class="col-lg-12">
+                    <p>Location:</p>
+                    <p>@Model.Location</p>
+                </div>
+                <div id="bioLocation" class="col-lg-12">
+                    <p>Marital Status:</p>
+                    <p>@Model.MaritalStatus</p>
+                </div>
+                <div id="adjstStngs">
+                    <p>
+                        <a id="adjPfSt">Adjust profile settings</a>
+                    </p>
+                </div>
+                <div ng-controller="MessagesController" id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close pull-right">&times;</span>
+                        <br />
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                        {
+                            <div class="col-lg-6">
+                                <p>First Name</p>
+                                <input class="form-control" name="FirstName" value="{{pi.FirstName}}">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Last Name</p>
+                                <input class="form-control" name="LastName" value="{{pi.LastName}}">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Email</p>
+                                <input class="form-control" name="Email" value="{{pi.Email}}">
+                            </div>
+                            if (Model.MaritalStatus == "-")
+                            {
+                                <div id="gender" class="col-lg-6">
+                                    <select name="MaritalStatus">
+                                        <option value="-">-</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Widowed">Widowed</option>
+                                    </select>
+                                    <p>Gender</p>
+                                </div>
+                            }
+                            else if (Model.MaritalStatus == "Married")
+                            {
+                                <div id="gender" class="col-lg-6">
+                                    <select name="MaritalStatus">
+                                        <option value="-">-</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Widowed">Widowed</option>
+                                    </select>
+                                    <p>Gender</p>
+                                </div>
+                            }
+                            else if (Model.MaritalStatus == "Single")
+                            {
+                                <div id="gender" class="col-lg-6">
+                                    <p>Gender</p>
+                                    <select class="form-control" name="MaritalStatus">
+                                        <option value="@Model.MaritalStatus">@Model.MaritalStatus</option>
+                                        <option value="-">-</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Widowed">Widowed</option>
+                                    </select>
+                                </div>
+                            }
+                            else if (Model.MaritalStatus == "Divorced")
+                            {
+                                <div id="gender" class="col-lg-6">
+                                    <select class="form-control" name="MaritalStatus">
+                                        <option value="@Model.MaritalStatus">@Model.MaritalStatus</option>
+                                        <option value="-">-</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Widowed">Widowed</option>
+                                    </select>
+                                    <p>Gender</p>
+                                </div>
+                            }
+                            else if (Model.MaritalStatus == "Widowed")
+                            {
+                                <div id="gender" class="col-lg-6">
+                                    <select class="form-control" name="MaritalStatus">
+                                        <option value="@Model.MaritalStatus">@Model.MaritalStatus</option>
+                                        <option value="-">-</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Married">Married</option>
+                                    </select>
+                                    <p>Gender</p>
+                                </div>
+                            }
+                            <div class="col-lg-6">
+                                <p>Current Occupation</p>
+                                <input class="form-control" type="text" name="CurrentOccupation" value="{{pi.CurrentOccupation}}" />
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Previous Occupation</p>
+                                <input class="form-control" type="text" name="PrevOccupation" value="{{pi.PreviousOccupation}}" />
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Education</p>
+                                <input class="form-control" type="text" name="Education" value="{{pi.Education}}" />
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Date of Birth</p>
+                                <input class="form-control" name="dateofbirth" type="date" value="{{pi.DoB}}" />
+                            </div>
+                                <div class="col-lg-12">
+                                    <p>Bio</p>
+                                    <textarea class="form-control" name="bio">{{pi.Bio}}</textarea>
+                                </div>
+                                <div id="location" class="col-lg-12">
+                                    <p>Location</p>
+                                    <div class="col-lg-6">
+                                        <select name="country" class="form-control" ng-model="selectedCountry" ng-options="c.Name for c in countries" ng-change="listOfCities(selectedCountry)">
+                                            <option value="" disabled>Select a Country</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <select name="city" class="form-control" ng-model="selectedCity" ng-options="c.city for c in city | filter: {Country: selectedCountry.Name} : true">
+                                            <option value="" disabled>Select a City</option>
+                                        </select>
+                                    </div>
+                                    @*<input class="form-control" name="location" type="text" value="{{e.Location}}" />*@
+                                </div>
+                                <div>
+                                    <button style="width: 100%;" type="submit" class="btn btn-info">Submit</button>
+                                </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="col-lg-6">
-    <p>Yo</p>
-</div>
-<div class="col-lg-3">
-    <p>Yo</p>
+    </div>
+
+    <div id="background" class="col-lg-6">
+        <div class="col-lg-12">
+            <div style="border: 0;">
+                <p style="font-family: Tw Cen MT !important">Background</p>
+            </div>
+            <div>
+                <p><i class="fa fa-file-text"></i>Summary</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend tellus rutrum interdum consequat. Quisque viverra, quam sed suscipit lacinia, lacus ante rhoncus lacus, id maximus velit enim cursus ante. Aliquam vel erat vel odio faucibus viverra. Nullam imperdiet mauris mollis mattis posuere.</p>
+            </div>
+            <div>
+                <p><i class="fa fa-bank"></i>Experience</p>
+            </div>
+            <div>
+                <p><i class="fa fa-mortar-board"></i>Skills</p>
+            </div>
+            <div>
+                <p><i class="fa fa-star"></i>Interests</p>
+                <button class="col-lg-3">Branding</button>
+                <button class="col-lg-3">Web Design</button>
+                <button class="col-lg-3">Mobile Design</button>
+                <button class="col-lg-3">Development</button>
+            </div>
+            <div>
+                <p><i class="fa fa-sitemap"></i>Organisations</p>
+                <button class="col-lg-3">Coder Dojo</button>
+                <button class="col-lg-3">PostNord AB</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <p>Yo</p>
+    </div>
 </div>

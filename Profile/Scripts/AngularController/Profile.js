@@ -4716,7 +4716,13 @@ app.controller("MessagesController", function ($scope, $http) {
     }
     $http.get('/Home/GetPersonalInfo').then(function (d) {
         $scope.pi = d.data;
-        console.log(d.data)
+    }, function (error) {
+        alert('failed');
+    }
+);
+    $http.get('/Home/GetExperience').then(function (d) {
+        $scope.exp = d.data;
+        $scope.loadMore = d.data.length;
     }, function (error) {
         alert('failed');
     }

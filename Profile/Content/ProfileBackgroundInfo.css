@@ -7,7 +7,7 @@
     #background > div > div {
         overflow: hidden;
         border-top: 1px solid rgb(236, 234, 234);
-        padding: 10px 0px;
+        padding: 25px 0px;
     }
 
         #background > div > div:first-child > p {
@@ -22,18 +22,19 @@
             font-size: 22px;
         }
 
-            #background > div > div > p:first-child > i {
+            #background > div > div > p:first-child > i, #background > div > div:nth-child(3) > div > p:first-child > i {
                 width: 30px;
                 font-size: 22px;
                 margin-right: 10px;
             }
 
-        #background > div > div > p:last-child {
+        #background > div > div > p:last-child, #background > div > div:nth-child(3) > div > p:last-child {
+            margin: 0px;
             font-family: Verdana;
             line-height: 25px;
         }
 
-        #background > div > div:nth-child(5) > button, #background > div > div:nth-child(6) > button {
+        #background > div > div:nth-child(6) > button, #background > div > div:nth-child(7) > button {
             border-radius: 5px;
             color: rgb(117, 139, 158);
             font-weight: bold;
@@ -44,3 +45,42 @@
             width: 23%;
             margin-right: 10px;
         }
+
+        #background > div > div:nth-child(3) > div > p:first-child > span:first-child, #background > div > div:nth-child(3) > div > p:first-child > span:last-child {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #background > div > div:nth-child(3) > div > p:first-child > span:last-child {
+            color: rgb(6, 110, 183);
+        }
+
+        #background > div > div:nth-child(3) > div > p:nth-child(2) {
+            font-family: Verdana;
+            color: rgba(128, 128, 128, 0.68);
+            font-size: 13px;
+        }
+
+        #background > div > div:nth-child(3) > div > p:first-child {
+            margin-bottom: 2px;
+            line-height: 1.6;
+        }
+
+        #background > div > div:nth-child(3) > div {
+            padding: 15px 0px;
+        }
+        #background > div > div:nth-child(4) {
+            text-align: center;
+    border: 0;
+    padding-top: 0;
+        }
+        #background > div > div:nth-child(4) > button {
+        border-radius: 5px;
+    color: rgb(117, 139, 158);
+    font-weight: bold;
+    font-family: "Tw Cen MT";
+    padding: 10px;
+    background-color: rgba(145, 176, 204, 0.24);
+    border: 0px;
+    width: 23%;
+    margin-right: 10px; }

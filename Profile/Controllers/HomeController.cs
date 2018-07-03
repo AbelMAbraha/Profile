@@ -106,6 +106,11 @@ namespace Profile.Controllers
             };
             return Json(viewModel, JsonRequestBehavior.AllowGet);
         }
+        public JsonResult GetExperience()
+        {
+            List<Experience> exp = Experience.Exp();
+            return Json(exp, JsonRequestBehavior.AllowGet);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

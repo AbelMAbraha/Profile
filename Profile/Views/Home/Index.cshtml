@@ -237,18 +237,66 @@
                     <p>{{experience.Tasks}}</p>
                 </div>
             </div>
-            <div>
+            <div ng-hide="count == loadMore">
                 <button ng-click="count = count + 1" ng-init="count=2" ng-disabled="count >= loadMore">SEE MORE</button>
             </div>
-            <div>
+            <div id="skillsInfo">
                 <p><i class="fa fa-mortar-board"></i>Skills</p>
+                <div id="skills">
+                    <p>Frontend (HTML, CSS & JavaScript)</p>
+                    <div>
+                        <div class="col-lg-12">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <p>C#</p>
+                    <div>
+                        <div class="col-lg-12">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <p>MVC</p>
+                    <div>
+                        <div class="col-lg-12">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <p>Microsoft SQL Server</p>
+                    <div>
+                        <div class="col-lg-12">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <p>AngularJS</p>
+                    <div>
+                        <div class="col-lg-12">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <p>GitHub</p>
+                    <div>
+                        <div class="col-lg-12">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>
                 <p><i class="fa fa-star"></i>Interests</p>
-                <button class="col-lg-3">Branding</button>
-                <button class="col-lg-3">Web Design</button>
-                <button class="col-lg-3">Mobile Design</button>
-                <button class="col-lg-3">Development</button>
+                <button class="col-lg-3">Web</button>
+                <button class="col-lg-3">Frontend</button>
+                <button class="col-lg-3">Backend</button>
+                <button class="col-lg-3">Database</button>
             </div>
             <div>
                 <p><i class="fa fa-sitemap"></i>Organisations</p>

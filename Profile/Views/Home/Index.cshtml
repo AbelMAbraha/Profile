@@ -57,31 +57,35 @@
                 </div>
             </button>
             <div class="col-lg-12" id="BioInfo">
-                <div id="bioFullName" class="col-lg-12">
+                <div class="col-lg-12">
                     <p>Full Name:</p>
                     <p>@Model.FirstName @Model.LastName</p>
                 </div>
-                <div id="bioInfoAboutMe" class="col-lg-12">
+                <div class="col-lg-12">
+                    <p>Date of Birth:</p>
+                    <p>@Model.DoB</p>
+                </div>
+                <div class="col-lg-12">
                     <p>Bio:</p>
                     <p>@Model.Bio</p>
                 </div>
-                <div id="bioFullName" class="col-lg-12">
+                <div class="col-lg-12">
                     <p>Current:</p>
                     <p>@Model.CurrentOccupation</p>
                 </div>
-                <div id="bioOccupation" class="col-lg-12">
+                <div class="col-lg-12">
                     <p>Previous:</p>
                     <p>@Model.PreviousOccupation</p>
                 </div>
-                <div id="bioLocation" class="col-lg-12">
+                <div class="col-lg-12">
                     <p>Education:</p>
                     <p>@Model.Education</p>
                 </div>
-                <div id="bioLocation" class="col-lg-12">
+                <div class="col-lg-12">
                     <p>Location:</p>
                     <p>@Model.Location</p>
                 </div>
-                <div id="bioLocation" class="col-lg-12">
+                <div class="col-lg-12">
                     <p>Marital Status:</p>
                     <p>@Model.MaritalStatus</p>
                 </div>
@@ -305,7 +309,66 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-3">
-        <p>Yo</p>
+    <div id="contacts" class="col-lg-3">
+        <div id="contactViewers">
+            <div>
+                <div><p>People Also Viewed</p></div>
+            </div>
+
+            <div>
+                <img src="~/Content/Images/portratt-headshot-kvinna-fotograf-capra-pedersen-1024x684.jpg" />
+                <p>
+                    <span>Meagan Fisher</span>
+                    <button><i class="fa fa-plus"></i></button>
+                    <br />
+                    <span>UX Designer</span>
+                </p>
+            </div>
+            <div>
+                <img src="~/Content/Images/headshotlondon-corporate-headshots.jpg" />
+                <p>
+                    <span>Bill S Kennedy</span>
+                    <button><i class="fa fa-plus"></i></button>
+                    <br />
+                    <span>Art Director</span>
+                </p>
+            </div>
+            <div>
+                <img src="~/Content/Images/Ken_Nguyen_Headshot_16H3626-1-760x507.jpg" />
+                <p>
+                    <span>Victor Edison</span>
+                    <button><i class="fa fa-plus"></i></button>
+                    <br />
+                    <span>Product Designer</span>
+                </p>
+            </div>
+            <div>
+                <img src="~/Content/Images/The-Bridge-Headshots-2014-1734-Edit.jpg" />
+                <p>
+                    <span>Michael Stephens</span>
+                    <button><i class="fa fa-plus"></i></button>
+                    <br />
+                    <span>Web developer</span>
+                </p>
+            </div>
+            <div>
+                <img src="~/Content/Images/0.jpg" />
+                <p>
+                    <span>Amanda Smith</span>
+                    <button><i class="fa fa-plus"></i></button>
+                    <br />
+                    <span>Mobile UI/UX Designer</span>
+                </p>
+            </div>
+            <div>
+                <img src="~/Content/Images/boulder-professional-headshot-photographers.jpg" />
+                <p>
+                    <span>Lucie Miller</span>
+                    <button><i class="fa fa-plus"></i></button>
+                    <br />
+                    <span>Mobile App Developer </span>
+                </p>
+            </div>
+        </div>
     </div>
 </div>

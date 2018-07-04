@@ -216,11 +216,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\Images\pexels-photo-290595.jpeg" />
-    <Content Include="Content\Images\pexels-photo-540518.jpeg" />
-    <Content Include="Content\Images\pexels-photo-572897.jpeg" />
+    <Content Include="Content\Images\0.jpg" />
+    <Content Include="Content\Images\boulder-professional-headshot-photographers.jpg" />
+    <Content Include="Content\Images\headshotlondon-corporate-headshots.jpg" />
+    <Content Include="Content\Images\Ken_Nguyen_Headshot_16H3626-1-760x507.jpg" />
+    <Content Include="Content\Images\portratt-headshot-kvinna-fotograf-capra-pedersen-1024x684.jpg" />
     <Content Include="Content\Images\starry-sky-2099828_1920.jpg" />
     <Content Include="Content\Images\swedish_flag_wallpaper_sweden_world_wallpaper_1440_900_widescreen_1829.jpg" />
+    <Content Include="Content\Images\The-Bridge-Headshots-2014-1734-Edit.jpg" />
     <Content Include="Content\Modal.css" />
     <Content Include="Content\Navbar.css" />
     <Content Include="Content\PersonalInformation.css" />

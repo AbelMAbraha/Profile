@@ -14,6 +14,9 @@ namespace Profile.Controllers
         public ActionResult Index()
         {
             ProfileInformation PI = ProfileInformation.PI();
+            var dateofbirth = Convert.ToDateTime(PI.DateOfBirth);
+            string date = "";
+            Date(ref date, dateofbirth);
             var viewModel = new ProfileInformationViewModel()
             {
                 FirstName = PI.FirstName,
@@ -24,7 +27,8 @@ namespace Profile.Controllers
                 Location = PI.Location,
                 Education = PI.Education,
                 CurrentOccupation = PI.CurrentOccupation,
-                Email = PI.Email
+                Email = PI.Email,
+                DoB = date
             };
             return View(viewModel);
         }

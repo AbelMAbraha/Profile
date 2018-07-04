@@ -112,9 +112,97 @@
     }
 
         #skills > div > div > div {
+            background-color: rgb(117, 139, 158);
             width: 0px;
             padding: 4px;
             border-radius: 5px;
-            BACKGROUND-COLOR: #1a4e84;
             TRANSITION: 1S;
         }
+
+
+
+
+#contactViewers {
+    background-color: white;
+}
+
+    #contactViewers > div:first-child {
+        padding: 0px 30px;
+    }
+
+
+        #contactViewers > div:first-child > div {
+            border-bottom: 1px solid rgb(236, 234, 234);
+            padding: 26px 0px;
+        }
+
+            #contactViewers > div:first-child > div > p {
+                margin: 0px;
+                color: rgb(29, 29, 51);
+                font-size: 22px;
+                font-weight: bold;
+                font-family: "Tw Cen MT";
+            }
+
+    #contactViewers > div {
+        overflow: hidden;
+        padding: 11px 20px;
+    }
+
+        #contactViewers > div:first-child:hover {
+            background-color: white;
+        }
+
+        #contactViewers > div:hover {
+            background-color: rgba(128, 128, 128, 0.08);
+        }
+
+            #contactViewers > div:hover > p > button {
+                visibility: visible;
+            }
+
+        #contactViewers > div > img {
+            width: 22%;
+            border-radius: 53PX;
+            height: 80px;
+            float: left;
+        }
+
+        #contactViewers > div > p {
+            padding: 21px;
+            margin: 0;
+        }
+
+            #contactViewers > div > p > span:first-child {
+                margin-left: 15px;
+                font-weight: bold;
+                font-size: 20px;
+                font-family: "Tw Cen MT";
+            }
+
+            #contactViewers > div > p > button {
+                margin-top: 10px;
+                visibility: hidden;
+                background-color: rgb(2, 138, 255);
+                float: right;
+                border-radius: 57px;
+                border: 0;
+            }
+
+                #contactViewers > div > p > button > i {
+                    color: white;
+                    position: relative;
+                    top: 2px;
+                    font-size: 20px;
+                    padding: 5px 3px;
+                }
+
+            #contactViewers > div > p > span:last-child {
+                margin-left: 15px;
+                color: rgba(128, 128, 128, 0.62);
+                font-family: Verdana;
+            }
+            #contacts {
+                box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 5px 0px, rgba(0, 0, 0, 0.04) 0px 2px 10px 0px;
+                padding: 0;
+            }
